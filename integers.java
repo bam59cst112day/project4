@@ -26,33 +26,28 @@ void draw() {
   background( 150, 200, 250 );
   fill(0);
   textSize(15);
-  // Tot & avg
-  int tot;
-  tot=  sum( a, many );
-  text( "Total is "+tot, 10,10 );
-  float average;
-  //--  average=  float( tot ) / float(many);
-  average=  float( tot ) / float(many);
-  text( "Average is "+average, 10,20 );
-
-  // Display the biggest number.
-  int big;
-  big=  biggest( a, many );
-  text( "The biggest value is "+big, 10,30  );
-
+  
   //// Show array (BEFORE).
   x=10;
   y=50;
   show( a, many );  
-  
-  
-
-  //// Show array (BEFORE).
-  x=150;
-  y=50;
-  show( a, many );  
 
   
+  // Tot & avg
+  int tot;
+  tot=  sum( a, many );
+  text( "Total is "+tot, 10,y+10 );
+  float average;
+  //--  average=  float( tot ) / float(many);
+  average=  float( tot ) / float(many);
+  text( "Average is "+average, 10,y+20 );
+
+  // Display the biggest number.
+  int big;
+  big=  biggest( a, many );
+  text( "The biggest value is "+big, 10,y+30  );
+  
+
 }
 
 //// Return INDEX OF biggest # in array.
